@@ -17,7 +17,7 @@ L.Canvas.prototype._updateTriangle = function (layer) {
     wh  = layer._width / 2
     hh  = layer._height / 2
     // rotation angle from deg to rad
-    r   = layer._rotation !== 0 ? layer._rotation * Math.PI / 180 : 0
+    r   = layer._rotation !== 0 ? layer._rotation * (Math.PI * 2) / 360 : 0
 
     this._drawnLayers[layer._leaflet_id] = layer
 
