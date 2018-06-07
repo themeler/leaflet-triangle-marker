@@ -16,13 +16,13 @@ All options are optional as in CircleMarker, LatLng is required. Other, non list
 
 var // example data
     renderer = L.canvas(),
-    latLng = L.latLng(50.671062, 17.926126)
+    latLng = L.latLng(50.671062, 17.926126),
     // example marker
     myTriangleMarker = L.triangleMarker(latLng, {
-        renderer: renderer, // your canvas renderer (default: L.canvas())
-        rotation: 45, // triangle rotation in degrees (default: 0)
-        width: 12, // width of the base of triangle (default: 24)
-        height: 8, // height of triangle (default: 24)
+        renderer:   renderer,   // your canvas renderer (default: L.canvas())
+        rotation:   45,         // triangle rotation in degrees (default: 0)
+        width:      12,         // width of the base of triangle (default: 24)
+        height:     8,          // height of triangle (default: 24)
     }))
 ```
 
