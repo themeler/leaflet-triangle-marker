@@ -19,7 +19,7 @@ var // example data
     latLng = L.latLng(50.671062, 17.926126)
     // example marker
     myTriangleMarker = L.triangleMarker(latLng, {
-        renderer: renderer, // your canvar renderer (default: L.canvas())
+        renderer: renderer, // your canvas renderer (default: L.canvas())
         rotation: 45, // triangle rotation in degrees (default: 0)
         width: 12, // width of the base of triangle (default: 24)
         height: 8, // height of triangle (default: 24)
