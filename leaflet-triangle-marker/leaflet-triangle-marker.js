@@ -63,6 +63,11 @@ L.TriangleMarker = L.Path.extend({
         renderer: L.canvas()
 	},
 
+    /**
+     * Initialize
+     * @param   {Object}    latlng
+     * @param   {Object}    options
+     */
 	initialize: function (latlng, options) {
 		L.setOptions(this, options)
 
@@ -171,6 +176,9 @@ L.TriangleMarker = L.Path.extend({
 		this._updateBounds()
 	},
 
+    /**
+     * Update pixelbounds
+     */
 	_updateBounds: function () {
 		var w = this._width / 2,
 		    h = this._height / 2,
@@ -180,10 +188,16 @@ L.TriangleMarker = L.Path.extend({
 		this._pxBounds = new L.Bounds(this._point.subtract(p), this._point.add(p))
 	},
 
+    /**
+     * Update
+     */
 	_update: function () {
 		if (this._map) this._updatePath()
 	},
 
+    /**
+     * Update triangle path
+     */
 	_updatePath: function () {
 		this._renderer._updateTriangle(this)
 	},
