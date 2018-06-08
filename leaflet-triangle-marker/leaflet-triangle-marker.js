@@ -1,6 +1,6 @@
 /**
  * Leaflet triangle marker plugin for canvas renderer (renderer extension included)
- * https://github.com/themeler/leaflet-triangle-marker
+ * @author      Przemysław Melnarowicz <przemyslaw@melnarowicz.pl>
  */
 
 
@@ -22,11 +22,9 @@ L.Canvas.prototype._updateTriangle = function (layer) {
     this._drawnLayers[layer._leaflet_id] = layer
 
     // rotate canvas on triangle center before drawing
-    if (r !== 0) {
-        ctx.save()
-        ctx.translate(p.x, p.y)
-        ctx.rotate(r)
-    }
+    ctx.save()
+    ctx.translate(p.x, p.y)
+    ctx.rotate(r)
     // draw triangle
     ctx.beginPath()
     ctx.moveTo(0, -hh)
@@ -34,9 +32,7 @@ L.Canvas.prototype._updateTriangle = function (layer) {
     ctx.lineTo(-wh, hh * 2)
     ctx.closePath()
     // rotate back and restore position
-    if (r !== 0) {
-        ctx.restore()
-    }
+    ctx.restore()
 
     this._fillStroke(ctx, layer)
 },
@@ -162,7 +158,7 @@ L.TriangleMarker = L.Path.extend({
 		var width   = options && options.width  || this._width,
             height  = options && options.height || this._height
 
-		Path.prototype.setStyle.call(this, options)
+		L.Path.prototype.setStyle.call(this, options)
 		this.setWidth(width)
 		this.setHeight(height)
 
