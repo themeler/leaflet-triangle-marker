@@ -23,7 +23,7 @@ var // example data
         rotation:   45,         // triangle rotation in degrees (default: 0)
         width:      12,         // width of the base of triangle (default: 24)
         height:     8,          // height of triangle (default: 24)
-    }))
+    })
 ```
 
 #### Methods
