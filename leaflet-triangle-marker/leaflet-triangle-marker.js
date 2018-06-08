@@ -1,6 +1,7 @@
 /**
  * Leaflet triangle marker plugin for canvas renderer (renderer extension included)
- * @author      Przemysław Melnarowicz <przemyslaw@melnarowicz.pl>
+ * https://github.com/themeler/leaflet-triangle-marker/tree/master/leaflet-triangle-marker
+ * @author      Przemysław Melnarowicz
  */
 
 
